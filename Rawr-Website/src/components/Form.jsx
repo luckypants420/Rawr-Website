@@ -1,11 +1,23 @@
+
+
+
+function handleSubmit(event) {
+    event.preventDefault()
+    console.log("submited")
+    const formEl = event.currentTarget
+    const formData = new FormData(formEl)
+    console.log(formData.get("email"))
+    console.log(formData.get("password"))
+
+}
 export default function Form() {
     return (
 
 
 
         <>
-            <section className="from-section">
-                <form method="POST" >
+            <section className="form-section">
+                <form className="form-inputs" method="POST" onSubmit={handleSubmit}>
                     <label> Email:
                         <input
                             type="email"
@@ -21,7 +33,7 @@ export default function Form() {
                             placeholder="********"
                         />
                     </label>
-
+                    <button > Submit</button>
                 </form>
             </section>
         </>
