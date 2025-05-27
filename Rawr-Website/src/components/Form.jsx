@@ -8,6 +8,7 @@ function handleSubmit(event) {
     const formData = new FormData(formEl)
     console.log(formData.get("email"))
     console.log(formData.get("password"))
+    formEl.reset()
 
 }
 export default function Form() {
