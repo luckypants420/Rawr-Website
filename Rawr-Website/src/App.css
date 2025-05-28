@@ -63,3 +63,9 @@
   flex-wrap: wrap;
 
 }
+.fieldset-checkbox {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+}

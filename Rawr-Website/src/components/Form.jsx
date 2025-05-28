@@ -10,6 +10,15 @@ function handleSubmit(event) {
     console.log(formData.get("password"))
     console.log(formData.get("Super Sayian Status"))
     console.log(formData.get("msg"))
+    const races = formData.getAll("Race")
+    console.log(formData.get("favColor"))
+
+    const data = Object.fromEntries(formData.entries())
+    const allData = {
+        ...data,
+        races
+    }
+    console.log(allData)
     formEl.reset()
 
 }
@@ -27,6 +36,7 @@ export default function Form() {
                             type="email"
                             name="email"
                             placeholder="example@hotmail.com"
+                            defaultValue="example@hotmail.com"
                         />
                     </label>
 
@@ -36,6 +46,8 @@ export default function Form() {
                             type="password"
                             name="password"
                             placeholder="********"
+                            defaultValue="example123"
+
                         />
                     </label>
                     <label>
@@ -43,7 +55,10 @@ export default function Form() {
                         <textarea
                             id="msg"
                             name="msg"
-                            placeholder="i want to contact about.." > </textarea>
+                            placeholder="i want to contact about.."
+                            defaultValue="lets talk about..."
+                        >
+                        </textarea>
                     </label>
 
                     <fieldset className="fieldset-radio">
@@ -53,7 +68,8 @@ export default function Form() {
                             <input
                                 type="radio"
                                 name="Super Sayian Status"
-                                value="Super Sayian" />
+                                value="Super Sayian"
+                                defaultChecked />
                             Super Sayian
                         </label>
                         <label>
@@ -64,6 +80,37 @@ export default function Form() {
                             Super Sayian 2
                         </label>
                     </fieldset>
+
+                    <fieldset className="fieldset-checkbox">
+                        <legend>Race</legend>
+                        <label>
+
+                            <input
+                                type="checkbox"
+                                name="Race"
+                                value="Namakian"
+                                defaultChecked />
+                            Namakian
+                        </label>
+                        <label>
+                            <input
+                                type="checkbox"
+                                name="Race"
+                                value="Sayian " />
+                            Sayian
+                        </label>
+                    </fieldset>
+                    <label >
+                        <select id="favColor" name="favColor">
+                            <option disabled> -- Choose Color </option>
+                            <option defaultChecked value="Red"> Red</option>
+                            <option value="White"> White</option>
+                            <option value="Black"> Black</option>
+                            <option value="Blue"> Blue</option>
+                        </select>
+
+                    </label>
+
 
 
 
