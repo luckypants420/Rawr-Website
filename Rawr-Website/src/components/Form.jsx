@@ -108,10 +108,7 @@ export default function Form() {
                             <option value="Black"> Black</option>
                             <option value="Blue"> Blue</option>
                         </select>
-
-
                     </label>
-
 
 
 
