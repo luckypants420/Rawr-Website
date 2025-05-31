@@ -24,9 +24,6 @@ function handleSubmit(event) {
 }
 export default function Form() {
     return (
-
-
-
         <>
             <section className="form-section">
                 <form className="form-inputs" method="POST" onSubmit={handleSubmit}>
