@@ -96,7 +96,7 @@ export default function Form() {
                                 value="Sayian " />
                             Sayian
                         </label>
-                    </fieldset>
+                    </fieldset>                 
                     <label >
                         <select id="favColor" name="favColor">
                             <option disabled> -- Choose Color </option>
