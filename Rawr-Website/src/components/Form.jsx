@@ -22,6 +22,8 @@ function handleSubmit(event) {
     formEl.reset()
 
 }
+
+
 export default function Form() {
     return (
         <>
